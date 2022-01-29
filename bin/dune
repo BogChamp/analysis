@@ -1,0 +1,6 @@
+(executable
+ (name main)
+ (public_name mulua)
+ (libraries muLua core cmdliner)
+ (preprocess
+  (pps ppx_jane ppx_compose ppx_gen_rec)))

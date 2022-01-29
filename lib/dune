@@ -1,0 +1,10 @@
+(library
+ (name muLua)
+ (libraries core sedlex menhirLib ocamlgraph)
+ (preprocess
+  (pps ppx_jane ppx_compose sedlex.ppx)))
+
+(menhir
+ (flags --explain)
+ (merge_into Parser_Menhir)
+ (modules Parser))
